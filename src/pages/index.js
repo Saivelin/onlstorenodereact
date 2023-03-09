@@ -4,7 +4,7 @@ const index = () => {
 
     const { colorMode, toggleColorMode } = useColorMode();
     return (
-        <Box bg="primary">
+        <Box bg="#212123">
             Hello world
         </Box>
     );

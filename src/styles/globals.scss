@@ -1,9 +1,15 @@
 @import "./components/header";
 
+@import "./variables.scss";
+
 *{
     margin: 0;
+    background-color: #212123;
+    color: $color;
 }
 
-.Layouot{
+
+
+body, .Layouot{
     background-color: #212123;
 }
