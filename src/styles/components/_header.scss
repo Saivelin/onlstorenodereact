@@ -43,4 +43,9 @@
             border: 1px $main solid !important;
         }
     }
+    &__nav{
+        display: flex;
+        justify-content: right;
+        column-gap: 30px;
+    }
 }
