@@ -3,23 +3,23 @@ import Image from "next/image";
 
 const WorthSeeing = () => {
     const [worth, setWorth] = useState([{
-        img: "/snekers.png",
+        img: "/sneakers.png",
         cat: "sneakers"
     },
     {
-        img: "/snekers.png",
+        img: "/sneakers.png",
         cat: "sneakers"
     },
     {
-        img: "/snekers.png",
+        img: "/sneakers.png",
         cat: "sneakers"
     },
     {
-        img: "/snekers.png",
+        img: "/sneakers.png",
         cat: "sneakers"
     },
     {
-        img: "/snekers.png",
+        img: "/sneakers.png",
         cat: "sneakers"
     },
     ])
@@ -31,7 +31,7 @@ const WorthSeeing = () => {
                 {worth.map((el) => {
                     return (
                         <div className="WorthSeeing__item">
-                            <Image src={el.img} />
+                            <Image className="WorthSeeing__item-img" src={el.img} width={400} height={300} />
                             <h4 className="WorthSeeing__item-header">{el.cat}</h4>
                         </div>
                     )

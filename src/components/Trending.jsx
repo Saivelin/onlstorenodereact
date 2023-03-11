@@ -4,6 +4,7 @@ import Image from "next/image";
 const Trending = () => {
     const [trending, setTrending] = useState([
         {
+            id: 1,
             title: "Nike ZoomX 2023",
             category: "Sneakers",
             price: "99$",
@@ -12,6 +13,7 @@ const Trending = () => {
             img: "/nikeZoomX.png",
         },
         {
+            id: 2,
             title: "Nike ZoomX 2023",
             category: "Sneakers",
             price: "99$",
@@ -20,6 +22,7 @@ const Trending = () => {
             img: "/nikeZoomX.png",
         },
         {
+            id: 3,
             title: "Nike ZoomX 2023",
             category: "Sneakers",
             price: "99$",
@@ -28,6 +31,7 @@ const Trending = () => {
             img: "/nikeZoomX.png",
         },
         {
+            id: 4,
             title: "Nike ZoomX 2023",
             category: "Sneakers",
             price: "99$",
@@ -36,6 +40,7 @@ const Trending = () => {
             img: "/nikeZoomX.png",
         },
         {
+            id: 5,
             title: "Nike ZoomX 2023",
             category: "Sneakers",
             price: "99$",

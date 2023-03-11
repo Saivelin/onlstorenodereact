@@ -1,6 +1,8 @@
 import Categories from "@/components/Categories";
 import MainBlock from "@/components/MainBlock";
 import Trending from "@/components/Trending";
+import WorthSeeing from "@/components/WorthSeeing";
+import Sale from "@/components/Sale";
 import { Box, useColorMode } from "@chakra-ui/react";
 
 const index = () => {
@@ -11,6 +13,8 @@ const index = () => {
             <Categories />
             <MainBlock />
             <Trending />
+            <WorthSeeing />
+            <Sale />
         </Box>
     );
 };
