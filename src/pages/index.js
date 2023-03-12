@@ -12,9 +12,10 @@ const index = () => {
         <Box bg="#212123" className="mainPage">
             <Categories />
             <MainBlock />
-            <Trending />
+            <Trending title={"Trending"} />
             <WorthSeeing />
             <Sale />
+            <Trending title={"Less than 100$"} />
         </Box>
     );
 };

@@ -21,12 +21,12 @@
         font-weight: 300;
         font-size: 70px;
         text-align: center;
-        color: #6C3EB8;
+        color: $main;
     }
     &__big{
         font-size: 150px;
         font-weight: 300;
-        color: #6C3EB8;
+        color: $main;
     }
     &__btn{
         font-size: 20px;
@@ -34,7 +34,7 @@
         align-items: center;
         justify-content: center;
         display: grid;
-        background-color: #6C3EB8;
+        background-color: $main;
         max-width: 138px;
         border-radius: 6px;
         justify-self: center;

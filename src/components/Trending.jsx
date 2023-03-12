@@ -1,7 +1,8 @@
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
-const Trending = () => {
+const Trending = ({ title }) => {
     const [trending, setTrending] = useState([
         {
             id: 1,
@@ -52,7 +53,7 @@ const Trending = () => {
 
     return (
         <div className='trending'>
-            <div className="trending__header">Trending</div>
+            <div className="trending__header">{title}</div>
             <div className="trending__items">
                 {trending.map((el) => {
                     return (
@@ -72,6 +73,9 @@ const Trending = () => {
                         </div>
                     )
                 })}
+            </div>
+            <div className="trending__btnWrapper">
+                <Link className="trending__btn" href={"/"}>See more</Link>
             </div>
         </div>
     );
