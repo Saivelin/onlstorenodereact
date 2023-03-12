@@ -11,15 +11,6 @@ const ProductsToCat = () => {
 
     const [items, setItems] = useState([
         {
-            id: 1,
-            title: "Nike ZoomX 2023",
-            category: "Sneakers",
-            price: "19$",
-            oldprice: "79$",
-            purchased: "19",
-            img: "/nikeZoomX.png",
-        },
-        {
             id: 2,
             title: "Nike ZoomX 2023",
             category: "Sneakers",
@@ -228,6 +219,7 @@ const ProductsToCat = () => {
 
     useEffect((ev) => {
         let response = axios.get("https://api.escuelajs.co/api/v1/products")
+        console.log(response.then((el) => { console.log(el.data[4]) }))
         // response.then((el) => { setItems(el.data) })
     }, [])
 
@@ -240,16 +232,16 @@ const ProductsToCat = () => {
                     {itemsNow.map((el) => {
                         return (
                             <div className="trending__item">
-                                <Image className="trending__item-img" src={el.img} width={1000} height={1000} />
+                                <Image className="trending__item-img" src={el?.img} width={1000} height={1000} />
                                 <div className="trending__item-about">
-                                    <p className="trending__item-header">{el.title}</p>
-                                    <p className="trending__item-category">{el.category}</p>
+                                    <p className="trending__item-header">{el?.title}</p>
+                                    <p className="trending__item-category">{el?.category}</p>
                                     <div className="trending__item-footer">
                                         <div className="trending__item-prices">
-                                            <p className="trending__item-price">{el.price}</p>
-                                            <p className="trending__item-oldprice">{el.oldprice}</p>
+                                            <p className="trending__item-price">{el?.price}</p>
+                                            <p className="trending__item-oldprice">{el?.oldprice}</p>
                                         </div>
-                                        <p className="trending__item-purchased">{el.purchased} people purchased</p>
+                                        <p className="trending__item-purchased">{el?.purchased} people purchased</p>
                                     </div>
                                 </div>
                             </div>
