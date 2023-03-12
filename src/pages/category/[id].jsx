@@ -3,6 +3,7 @@ import MainBlock from "@/components/MainBlock";
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import axios from "axios";
+import Link from "next/link";
 
 const ProductsToCat = () => {
 
@@ -181,8 +182,6 @@ const ProductsToCat = () => {
             purchased: "19",
             img: "/nikeZoomX.png",
         },
-
-
     ])
 
     const [itemsNow, setItemsNow] = useState([])
@@ -234,7 +233,7 @@ const ProductsToCat = () => {
                             <div className="trending__item">
                                 <Image className="trending__item-img" src={el?.img} width={1000} height={1000} />
                                 <div className="trending__item-about">
-                                    <p className="trending__item-header">{el?.title}</p>
+                                    <Link href={"/products/" + el.id} className="trending__item-header">{el?.title}</Link>
                                     <p className="trending__item-category">{el?.category}</p>
                                     <div className="trending__item-footer">
                                         <div className="trending__item-prices">
