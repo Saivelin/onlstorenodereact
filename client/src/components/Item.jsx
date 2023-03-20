@@ -2,7 +2,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-const Item = () => {
+const Item = ({ item }) => {
 
     const [sizes, setSizes] = useState([4.5, 5, 5.5])
     const [size, setSize] = useState(sizes[0])
@@ -13,8 +13,8 @@ const Item = () => {
                 <Image src={"/newYear.png"} width={1000} height={1000} />
             </div>
             <div className="item__about">
-                <h1 className="item__about-header">Bouncing sneaker Hermès</h1>
-                <p className="item__about-price">599$</p>
+                <h1 className="item__about-header">{item?.title}</h1>
+                <p className="item__about-price">{item?.price}$</p>
                 <div className="item__about-color">
                     <p className="item__about-color-text">Color: </p>
                     <p className="item__about-color-color">Blanc</p>
@@ -28,8 +28,7 @@ const Item = () => {
                     </div>
                 </div>
                 <p className="item__about-text">
-                    Sneaker in air mesh and suede goatskin.
-                    Light sole with contrasting design for a versatile and modern look.
+                    {item?.description}
                 </p>
                 <div className="item__about-btns">
                     <button className="item__about-toCart">Add to cart</button>
