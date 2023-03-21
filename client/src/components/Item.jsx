@@ -10,7 +10,7 @@ const Item = ({ item }) => {
     return (
         <div className="item">
             <div className="item__galery">
-                <Image src={"/newYear.png"} width={1000} height={1000} />
+                <Image loader={(e) => { return "http://localhost:8080/images/" + item?.img }} src={item?.img} width={1000} height={1000} />
             </div>
             <div className="item__about">
                 <h1 className="item__about-header">{item?.title}</h1>
